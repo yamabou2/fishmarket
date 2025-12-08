@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>FISH MARKET</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <a href="/"><img src="images/top1.png" alt="FISH MARKET"></a>
+        </div>
+        <nav class="nav">
+            <ul>
+				<li><a href="/">ホーム</a></li>
+				<li><a href="/">販売者</a></li>
+				<li><a href="/supplier">購入</a></li>
+				<li><a href="/contact">お問い合わせ</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <main>
+        <form action="result.html">
+            <p>
+                <label for="kind">お問い合わせ内容</label><br>
+                <select name="内容" id="kind">
+                    <option value="1">FISH MARKETについて</option>
+                    <option value="2">購入・販売について</option>
+                    <option value="3">その他</option>
+                </select>
+            </p>
+            <p>
+                当サイトを利用したことがありますか？<br>
+                <label><input type="radio" name="初回利用" value="yes" checked>はい</label><br>
+                <label><input type="radio" name="初回利用" value="no">いいえ</label>
+            </p>
+            <p>
+                <label for="mail">Email</label><br>
+                <input type="email" name="mail" placeholder="XXX @ XX.XX" id="mail">
+            </p>
+            <p>
+                <label for="subject">お問い合わせの件名</label><br>
+                <input type="text" name="subject" placeholder="タイトル" id="subject">
+            </p>
+            <p>
+                <label for="message">お問い合わせの具体的な内容</label><br>
+                <textarea name="message" id="message"></textarea>
+            </p>
+            <p class="submit">
+                <input type="submit" value="送信">
+            </p>
+        </form>
+    </main>
+    <footer>
+        <div class="gotop"><a href="#top"><img src="images/gotop.svg" alt="gotop"></a></div>
+        <p class="copyright">&copy; FISH MARKET</p>
+    </footer>
+</body>
+</html>

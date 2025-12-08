@@ -1,4 +1,4 @@
-package jp.spring.artisan;
+package jp.spring.fishmarket;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;

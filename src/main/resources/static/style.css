@@ -1,0 +1,231 @@
+/* ーーーーすべてのページに適用される設定ーーーー */
+html {
+    font-family: sans-serif;
+}
+/*ボックスモデル*/
+*{
+    box-sizing: border-box;
+}
+body{
+    margin: 0 0 0 0;
+}
+img[alt="sakana"] {
+  height: 250px; 
+  margin-bottom: 50px;
+}
+
+/*すべてのaタグに対しての指示*/
+a:link{
+    color: #FFFFFF;
+    background-color: #253958;
+    text-decoration: none;
+}
+
+a:visited{
+    color: #FFFFFF;
+    text-decoration: none;
+}
+
+a:hover{
+    color: #FFFFFF;
+    background-color: #F09D34;
+    text-decoration: none;
+}
+
+a:active{
+    color: #FFFFFF;
+    background-color: #F09D34;
+    text-decoration: none;
+}
+img{
+    max-width: 100%;
+}
+
+/*ナビゲーション下の画像*/
+.hero{
+    padding: 137px 0;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    color: #FFFFFF;
+    text-align: center;
+}
+.hero.index{
+    padding: 287px 0;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    font-size: 50px;
+    background-image: url(../images/hero.jpg);
+}
+
+.hero.consumer{
+    padding: 170px 0;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    font-size: 50px;
+    background-image: url(../images/haikei1.jpg);
+}
+
+
+/* ーーーーすべてのページに適用　ヘッダー ーーーー */
+/*ナビゲーション*/
+.nav ul{
+    margin: 30px 0 0 0;
+    height: 40px;
+    padding: 0;
+    list-style-type: none;
+    background-color: #253958;
+    color: #FFFFFF;
+
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+}
+.nav a:link{
+    color: #FFFFFF;
+    background-color: #253958;
+}
+
+.logo a:link{
+    background-color: #FFFFFF;
+}
+
+.gotop a:link{
+    background-color: #FFFFFF;
+}
+
+.nav a:visited{
+    color: #FFFFFF;
+    background-color: #253958;
+}
+
+.logo a:visited{
+    background-color: #FFFFFF;
+}
+
+.gotop a:visited{
+    background-color: #FFFFFF;
+}
+
+.nav a:hover{
+    text-decoration: none;
+    color: #253958;
+    background-color: #FFFFFF;
+}
+
+.nav a:active{
+    text-decoration: none;
+}
+
+/* すべてのページに適用　- ヒーロー - */
+/* ーーーーすべてのページに適用　メイン ーーーー */
+/**/
+main{
+    margin: 90px auto 90px auto;
+    max-width: 1000px;
+}
+/* すべてのページに適用　- フッター - */
+.gotop{
+    text-align: center;
+}
+.copyright{
+    margin-top: 20px;
+    margin-bottom: 0;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    background-color: #253958;
+    color: #FFFFFF;
+    text-align: center;
+}
+
+
+/* 個別のスタイル */
+.item {
+  display: flex;          /* 横並びにする */
+  align-items: center;    /* 縦位置を中央揃え */
+}
+
+.item .img {
+  width: 150px;
+  height: auto;
+  margin-right: 15px;     /* 画像と文字の間隔 */
+}
+
+.item .text {
+    margin-left: 30px;
+  font-size: 16px;
+}
+
+.repeat{
+    margin-top: 40px;
+    padding-top: 40px;
+    background: url(../images/repeat.png);
+    background-repeat: repeat-x;
+}
+
+
+/* index.html */
+.items{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+img[alt="minato"] {
+  width: 200px; 
+  height: 250px; 
+}
+img[alt="asaka"] {
+  width: 200px; 
+  height: 250px; 
+}
+
+.btn {
+  display: inline-block;
+  padding: 10px 20px;
+  border-radius: 5px;
+}
+.btn:hover {
+  background-color: #005a9e;
+}
+
+/*contact.html*/
+form{
+    margin: 0 auto;
+    max-width: 640px;
+}
+input[type="text"], textarea{
+    padding: 6px;
+    width: 100%;
+    font-size: 1rem;
+}
+textarea{
+    height: 140px;
+}
+.submit{
+    text-align: center;
+}
+input[type="submit"]{
+    border: none;
+    padding: 20px;
+    width: 200px;
+    background-color: #253958;
+    color: #FFFFFF;
+    font-size: 1rem;
+}
+
+/*レスポンシブ*/
+@media(max-width: 767px){
+    .logo{
+        width: 70px;
+    }
+
+    main{
+        padding: 0 4%;
+    }
+
+    .hero.index{
+        padding: 7vh;
+    }
+
+    .items{
+        grid-template-columns: 1fr;
+    }
+}

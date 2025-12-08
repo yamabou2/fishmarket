@@ -1,4 +1,4 @@
-package jp.spring.artisan;
+package jp.spring.fishmarket;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
