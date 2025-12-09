@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html xmlns:th="http://www.thymeleaf.org/">
 
 <head>
     <meta charset="UTF-8">
@@ -22,31 +22,36 @@
     </header>
     
     <main>
-        <form action="result.html">
+		<!--Formクラス作成-->
+        <form th:action="@{/result}" th:object="${contactForm}" method="post">
             <p>
                 <label for="kind">お問い合わせ内容</label><br>
-                <select name="内容" id="kind">
-                    <option value="1">FISH MARKETについて</option>
-                    <option value="2">購入・販売について</option>
-                    <option value="3">その他</option>
+                <select th:field="*{kind}" id="kind">
+                    <option value="FISH MARKETについて">FISH MARKETについて</option>
+                    <option value="購入・販売について">購入・販売について</option>
+                    <option value="その他">その他</option>
                 </select>
             </p>
             <p>
                 当サイトを利用したことがありますか？<br>
-                <label><input type="radio" name="初回利用" value="yes" checked>はい</label><br>
-                <label><input type="radio" name="初回利用" value="no">いいえ</label>
+                <label><input type="radio" th:field="*{firstTime}" value="はい">はい</label><br>
+                <label><input type="radio" th:field="*{firstTime}" value="いいえ">いいえ</label><br>
+				<span th:if="${#fields.hasErrors('firstTime')}" th:errors="*{firstTime}">
             </p>
             <p>
                 <label for="mail">Email</label><br>
-                <input type="email" name="mail" placeholder="XXX @ XX.XX" id="mail">
+                <input type="email" th:field="*{mail}" placeholder="XXX @ XX.XX" id="mail"><br>
+				<span th:if="${#fields.hasErrors('mail')}" th:errors="*{mail}">
             </p>
             <p>
                 <label for="subject">お問い合わせの件名</label><br>
-                <input type="text" name="subject" placeholder="タイトル" id="subject">
+                <input type="text" th:field="*{subject}" placeholder="タイトル" id="subject">
+				<span th:if="${#fields.hasErrors('subject')}" th:errors="*{subject}">
             </p>
             <p>
                 <label for="message">お問い合わせの具体的な内容</label><br>
-                <textarea name="message" id="message"></textarea>
+                <textarea th:field="*{message}" id="message"></textarea>
+				<span th:if="${#fields.hasErrors('message')}" th:errors="*{message}">
             </p>
             <p class="submit">
                 <input type="submit" value="送信">
